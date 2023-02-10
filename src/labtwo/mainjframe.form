@@ -28,7 +28,10 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="splitpane" min="-2" pref="608" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="splitpane" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -43,24 +46,21 @@
         <Container class="javax.swing.JPanel" name="toppanel">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JSplitPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JSplitPaneSupportLayout$JSplitPaneConstraintsDescription">
-              <JSplitPaneConstraints position="top"/>
+              <JSplitPaneConstraints position="left"/>
             </Constraint>
           </Constraints>
 
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="bottompanel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="279" max="-2" attributes="0"/>
-                              <Component id="viewbutton" min="-2" pref="124" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="bottompanel" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="280" max="-2" attributes="0"/>
+                      <Component id="viewbutton" min="-2" pref="169" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -68,9 +68,8 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
+                      <Component id="viewbutton" min="-2" pref="47" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="viewbutton" min="-2" pref="41" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="bottompanel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -93,9 +92,11 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="countrylabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="majorlabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="firstnamelabel" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -106,22 +107,18 @@
                                               <Component id="addresslabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="citylabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="addressfield" alignment="1" max="32767" attributes="0"/>
-                                              <Component id="telephonenumberfield" alignment="1" max="32767" attributes="0"/>
-                                              <Component id="agefield" alignment="1" max="32767" attributes="0"/>
-                                              <Component id="firstnamefield" max="32767" attributes="0"/>
-                                              <Component id="lastnamefield" max="32767" attributes="0"/>
+                                              <Component id="lastnamefield" pref="140" max="32767" attributes="0"/>
+                                              <Component id="agefield" max="32767" attributes="0"/>
+                                              <Component id="telephonenumberfield" max="32767" attributes="0"/>
                                               <Component id="emailfield" max="32767" attributes="0"/>
-                                              <Component id="cityfield" pref="140" max="32767" attributes="0"/>
+                                              <Component id="addressfield" max="32767" attributes="0"/>
+                                              <Component id="cityfield" max="32767" attributes="0"/>
+                                              <Component id="firstnamefield" max="32767" attributes="0"/>
                                           </Group>
-                                      </Group>
-                                      <Component id="countrylabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="majorlabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                          <Component id="majorfield" min="-2" pref="140" max="-2" attributes="0"/>
-                                          <Component id="countryfield" alignment="1" min="-2" pref="140" max="-2" attributes="0"/>
+                                          <EmptySpace pref="80" max="32767" attributes="0"/>
+                                          <Component id="photolabel" min="-2" pref="187" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -129,39 +126,57 @@
                                   <EmptySpace min="-2" pref="123" max="-2" attributes="0"/>
                                   <Component id="titlelabel" min="-2" pref="435" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="256" max="-2" attributes="0"/>
-                                  <Component id="savebutton" min="-2" pref="159" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="savebutton" min="-2" pref="194" max="-2" attributes="0"/>
+                                      <EmptySpace min="35" pref="35" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="275" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="majorfield" min="-2" pref="140" max="-2" attributes="0"/>
+                                          <Component id="countryfield" min="-2" pref="140" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
                           </Group>
-                          <EmptySpace pref="142" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                          <Component id="titlelabel" min="-2" pref="36" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="firstnamelabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="firstnamefield" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lastnamelabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lastnamefield" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="agelabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="agefield" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="telephonenumberlabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="telephonenumberfield" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                                  <Component id="titlelabel" min="-2" pref="36" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="firstnamelabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="firstnamefield" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lastnamelabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lastnamefield" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="agelabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="agefield" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="telephonenumberlabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="telephonenumberfield" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="photolabel" min="-2" pref="210" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -178,19 +193,19 @@
                               <Component id="citylabel" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="cityfield" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="countrylabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="countryfield" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
                           <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="countrylabel" min="-2" max="-2" attributes="0"/>
+                              <Component id="countryfield" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="majorlabel" min="-2" max="-2" attributes="0"/>
                               <Component id="majorfield" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="savebutton" min="-2" pref="23" max="-2" attributes="0"/>
-                          <EmptySpace pref="26" max="32767" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="savebutton" pref="42" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -256,6 +271,9 @@
                 <Component class="javax.swing.JTextField" name="cityfield">
                 </Component>
                 <Component class="javax.swing.JTextField" name="countryfield">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="countryfieldActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="majorfield">
                 </Component>
@@ -275,6 +293,13 @@
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="savebuttonActionPerformed"/>
                   </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="photolabel">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/labtwo/dreamstime_xxl_65780868_small.jpg"/>
+                    </Property>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>

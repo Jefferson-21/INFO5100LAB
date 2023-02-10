@@ -63,6 +63,7 @@ public class mainjframe extends javax.swing.JFrame {
         majorfield = new javax.swing.JTextField();
         titlelabel = new javax.swing.JLabel();
         savebutton = new javax.swing.JButton();
+        photolabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -93,6 +94,12 @@ public class mainjframe extends javax.swing.JFrame {
 
         majorlabel.setText("Major");
 
+        countryfield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                countryfieldActionPerformed(evt);
+            }
+        });
+
         titlelabel.setFont(new java.awt.Font("Helvetica Neue", 1, 36)); // NOI18N
         titlelabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titlelabel.setText("Enter User Details");
@@ -104,6 +111,8 @@ public class mainjframe extends javax.swing.JFrame {
             }
         });
 
+        photolabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/labtwo/dreamstime_xxl_65780868_small.jpg"))); // NOI18N
+
         javax.swing.GroupLayout bottompanelLayout = new javax.swing.GroupLayout(bottompanel);
         bottompanel.setLayout(bottompanelLayout);
         bottompanelLayout.setHorizontalGroup(
@@ -113,6 +122,8 @@ public class mainjframe extends javax.swing.JFrame {
                     .addGroup(bottompanelLayout.createSequentialGroup()
                         .addGap(104, 104, 104)
                         .addGroup(bottompanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(countrylabel)
+                            .addComponent(majorlabel)
                             .addGroup(bottompanelLayout.createSequentialGroup()
                                 .addGroup(bottompanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(firstnamelabel)
@@ -122,49 +133,58 @@ public class mainjframe extends javax.swing.JFrame {
                                     .addComponent(emaillabel)
                                     .addComponent(addresslabel)
                                     .addComponent(citylabel))
-                                .addGap(76, 76, 76)
+                                .addGap(63, 63, 63)
                                 .addGroup(bottompanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(addressfield, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(telephonenumberfield, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(agefield, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(firstnamefield)
-                                    .addComponent(lastnamefield)
+                                    .addComponent(lastnamefield, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+                                    .addComponent(agefield)
+                                    .addComponent(telephonenumberfield)
                                     .addComponent(emailfield)
-                                    .addComponent(cityfield, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)))
-                            .addComponent(countrylabel)
-                            .addComponent(majorlabel)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bottompanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(majorfield, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(countryfield, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(addressfield)
+                                    .addComponent(cityfield)
+                                    .addComponent(firstnamefield))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
+                                .addComponent(photolabel, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(bottompanelLayout.createSequentialGroup()
                         .addGap(123, 123, 123)
                         .addComponent(titlelabel, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(bottompanelLayout.createSequentialGroup()
-                        .addGap(256, 256, 256)
-                        .addComponent(savebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(142, Short.MAX_VALUE))
+                    .addGroup(bottompanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(bottompanelLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(savebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(35, 35, 35))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, bottompanelLayout.createSequentialGroup()
+                            .addGap(275, 275, 275)
+                            .addGroup(bottompanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(majorfield, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(countryfield, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap())
         );
         bottompanelLayout.setVerticalGroup(
             bottompanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bottompanelLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(titlelabel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54)
-                .addGroup(bottompanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(firstnamelabel)
-                    .addComponent(firstnamefield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(bottompanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lastnamelabel)
-                    .addComponent(lastnamefield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23)
-                .addGroup(bottompanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(agelabel)
-                    .addComponent(agefield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(bottompanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(telephonenumberlabel)
-                    .addComponent(telephonenumberfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(bottompanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(bottompanelLayout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(titlelabel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(54, 54, 54)
+                        .addGroup(bottompanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(firstnamelabel)
+                            .addComponent(firstnamefield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(bottompanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lastnamelabel)
+                            .addComponent(lastnamefield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(23, 23, 23)
+                        .addGroup(bottompanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(agelabel)
+                            .addComponent(agefield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(19, 19, 19)
+                        .addGroup(bottompanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(telephonenumberlabel)
+                            .addComponent(telephonenumberfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(bottompanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(photolabel, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(22, 22, 22)
                 .addGroup(bottompanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(emaillabel)
@@ -177,17 +197,17 @@ public class mainjframe extends javax.swing.JFrame {
                 .addGroup(bottompanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(citylabel)
                     .addComponent(cityfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(bottompanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(15, 15, 15)
+                .addGroup(bottompanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(countrylabel)
                     .addComponent(countryfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(15, 15, 15)
+                .addGap(18, 18, 18)
                 .addGroup(bottompanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(majorlabel)
                     .addComponent(majorfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(savebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(savebutton, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout toppanelLayout = new javax.swing.GroupLayout(toppanel);
@@ -195,26 +215,24 @@ public class mainjframe extends javax.swing.JFrame {
         toppanelLayout.setHorizontalGroup(
             toppanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(toppanelLayout.createSequentialGroup()
-                .addGroup(toppanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(toppanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(bottompanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(toppanelLayout.createSequentialGroup()
-                        .addGap(279, 279, 279)
-                        .addComponent(viewbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap()
+                .addComponent(bottompanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(toppanelLayout.createSequentialGroup()
+                .addGap(280, 280, 280)
+                .addComponent(viewbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         toppanelLayout.setVerticalGroup(
             toppanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, toppanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(viewbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(viewbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(bottompanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        splitpane.setTopComponent(toppanel);
+        splitpane.setLeftComponent(toppanel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -224,7 +242,9 @@ public class mainjframe extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitpane, javax.swing.GroupLayout.PREFERRED_SIZE, 608, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(splitpane))
         );
 
         pack();
@@ -252,18 +272,22 @@ public class mainjframe extends javax.swing.JFrame {
         //boolean inputuser;
         // TODO add your handling code here:
         //pass user object and switch to a different panel to view data
-        if (inputuser.getCity() == null || inputuser.getFirstname() == null || inputuser.getLastname() == null || inputuser.getAge() == null || inputuser.getTelephonenumber() == null || inputuser.getEmail() == null || inputuser.getCountry() == null || inputuser.getMajor() == null || inputuser.getAddress() == null) {    
+        if (inputuser.getFirstname() == null || inputuser.getLastname() == null || inputuser.getAge() == null || inputuser.getTelephonenumber() == null || inputuser.getEmail() == null || inputuser.getAddress() == null || inputuser.getCity() == null || inputuser.getCountry() == null || inputuser.getMajor() == null) {    
             JOptionPane.showMessageDialog(this, "Please enter user details", "Error", HEIGHT);
         } 
         else {
             // pass data to newly created panel and switch to that panel
             viewdetailspanel viewPanel = new viewdetailspanel(inputuser); // creation new panel
-            splitpane.setBottomComponent(viewPanel); // telling splitPanel to switch
+            splitpane.setBottomComponent(viewbutton); // telling splitPanel to switch
             
         }
     
 
     }//GEN-LAST:event_viewbuttonActionPerformed
+
+    private void countryfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_countryfieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_countryfieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -314,6 +338,7 @@ public class mainjframe extends javax.swing.JFrame {
     private javax.swing.JLabel lastnamelabel;
     private javax.swing.JTextField majorfield;
     private javax.swing.JLabel majorlabel;
+    private javax.swing.JLabel photolabel;
     private javax.swing.JButton savebutton;
     private javax.swing.JSplitPane splitpane;
     private javax.swing.JTextField telephonenumberfield;
