@@ -76,6 +76,24 @@ public class mainjframe extends javax.swing.JFrame {
             }
         });
 
+        javax.swing.GroupLayout toppanelLayout = new javax.swing.GroupLayout(toppanel);
+        toppanel.setLayout(toppanelLayout);
+        toppanelLayout.setHorizontalGroup(
+            toppanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(toppanelLayout.createSequentialGroup()
+                .addGap(280, 280, 280)
+                .addComponent(viewbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        toppanelLayout.setVerticalGroup(
+            toppanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, toppanelLayout.createSequentialGroup()
+                .addComponent(viewbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        splitpane.setLeftComponent(toppanel);
+
         firstnamelabel.setText("First Name");
 
         lastnamelabel.setText("Last Name");
@@ -142,7 +160,7 @@ public class mainjframe extends javax.swing.JFrame {
                                     .addComponent(addressfield)
                                     .addComponent(cityfield)
                                     .addComponent(firstnamefield))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
                                 .addComponent(photolabel, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(bottompanelLayout.createSequentialGroup()
                         .addGap(123, 123, 123)
@@ -206,33 +224,11 @@ public class mainjframe extends javax.swing.JFrame {
                     .addComponent(majorlabel)
                     .addComponent(majorfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(savebutton, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
+                .addComponent(savebutton, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout toppanelLayout = new javax.swing.GroupLayout(toppanel);
-        toppanel.setLayout(toppanelLayout);
-        toppanelLayout.setHorizontalGroup(
-            toppanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(toppanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(bottompanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(toppanelLayout.createSequentialGroup()
-                .addGap(280, 280, 280)
-                .addComponent(viewbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        toppanelLayout.setVerticalGroup(
-            toppanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, toppanelLayout.createSequentialGroup()
-                .addComponent(viewbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bottompanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        splitpane.setLeftComponent(toppanel);
+        splitpane.setRightComponent(bottompanel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -263,22 +259,27 @@ public class mainjframe extends javax.swing.JFrame {
         inputuser.setCountry(countryfield.getText());
         inputuser.setMajor(majorfield.getText());
         
+        if (inputuser.getFirstname() == null || inputuser.getLastname() == null || inputuser.getAge() == null || inputuser.getTelephonenumber() == null || inputuser.getEmail() == null || inputuser.getAddress() == null || inputuser.getCity() == null || inputuser.getCountry() == null || inputuser.getMajor() == null) {    
+            JOptionPane.showMessageDialog(this, "Please enter user details", "Error", HEIGHT);
+        } 
+        else{
+        
         JOptionPane.showMessageDialog(this, "User saved successfully", "Success", HEIGHT);
     
-        
+        } 
     }//GEN-LAST:event_savebuttonActionPerformed
 
     private void viewbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewbuttonActionPerformed
         //boolean inputuser;
         // TODO add your handling code here:
         //pass user object and switch to a different panel to view data
-        if (inputuser.getFirstname() == null || inputuser.getLastname() == null || inputuser.getAge() == null || inputuser.getTelephonenumber() == null || inputuser.getEmail() == null || inputuser.getAddress() == null || inputuser.getCity() == null || inputuser.getCountry() == null || inputuser.getMajor() == null) {    
+        if (inputuser == null || inputuser.getFirstname() == null || inputuser.getLastname() == null || inputuser.getAge() == null || inputuser.getTelephonenumber() == null || inputuser.getEmail() == null || inputuser.getAddress() == null || inputuser.getCity() == null || inputuser.getCountry() == null || inputuser.getMajor() == null) {    
             JOptionPane.showMessageDialog(this, "Please enter user details", "Error", HEIGHT);
-        } 
-        else {
-            // pass data to newly created panel and switch to that panel
-            viewdetailspanel viewPanel = new viewdetailspanel(inputuser); // creation new panel
-            splitpane.setBottomComponent(viewbutton); // telling splitPanel to switch
+//        } 
+//        else {
+//            // pass data to newly created panel and switch to that panel
+            viewdetailspanel viewpanel = new viewdetailspanel(inputuser); // creation new panel
+            splitpane.setBottomComponent(toppanel); // telling splitPanel to switch
             
         }
     
